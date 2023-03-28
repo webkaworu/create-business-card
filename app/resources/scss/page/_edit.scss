@@ -1,0 +1,203 @@
+.edit-section{
+    @include media-breakpoint-up(xl){
+        max-width: 980px;
+    }
+
+    .control-area{
+        min-width:210px;
+        font-size:12px;
+        color:#fff;
+
+        @include media-breakpoint-up(md){
+            margin-right:10px;
+        }
+
+        @include media-breakpoint-up(xl){
+            margin-right:30px;
+        }
+
+        legend{
+            position:relative;
+            z-index:5;
+            display:inline-block;
+            float:none;
+            width:auto;
+            padding:0 5px;
+            margin-bottom:0;
+            font-size:14px;
+            color:#fff;
+            background-color:$primary;
+            border:0;
+
+            +div{
+                position:relative;
+                top:-10px;
+                z-index:0;
+                padding:15px 5px;
+                border:solid 1px #fff;
+            }
+        }
+
+        button{
+            color:#333;
+            border: solid 1px #333;
+        }
+
+        .ctl-position{
+            margin: 0 auto;
+
+            td{
+                padding:2px 3px;
+            }
+        }
+
+        .ctl-grid{
+            margin:10px auto 0;
+
+            tbody{
+                td{
+                    padding:2px 3px;
+
+                    button{
+                        width: 20px;
+                        height: 20px;
+                        padding: 0;
+                        line-height: 18px;
+
+                        + button{
+                            margin-left:5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .edit-area{
+        flex-grow:1;
+        margin: 20px 0;
+
+        @include media-breakpoint-up(md){
+            margin:0;
+        }
+
+        .canvas{
+            position:relative;
+            width:100%;
+            padding-top:60.5%;
+            border:solid 1px #ddd;
+
+            @include media-breakpoint-up(md){
+                border-width:2px;
+            }
+        }
+
+        .svg,.grid{
+            position:absolute;
+            top:0;
+            right:0;
+            bottom:0;
+            left:0;
+            margin:auto;
+        }
+
+        .svg{
+            z-index:1;
+
+            text{
+                cursor:pointer;
+            }
+        }
+    }
+
+    .font-panel{
+        font-size:12px;
+
+        .nav-tabs {
+            border-bottom: 1px solid $primary;
+
+            .nav-link:not(.active):hover{
+                color:#fff;
+                background-color:$primary;
+                border-color:$primary;
+            }
+
+            .nav-link.active{
+                color:$primary;
+                cursor: default;
+                background-color: #fff;
+                border: 1px solid $primary;
+                border-bottom-color: transparent;
+            }
+
+
+            +.content{
+                padding:20px;
+                border:solid 1px $primary;
+                border-top:0;
+            }
+        }
+
+        .common-area{
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            margin-top:20px;
+
+            @include media-breakpoint-up(md){
+                margin-top:0;
+            }
+
+            button{
+                margin-right:0.25rem;
+                margin-left:0.25rem;
+                color:#333;
+                border: solid 1px #333;
+
+                &:nth-child(1){
+                    margin-left:0;
+                }
+
+                &:nth-last-child(1){
+                    margin-right:0;
+                }
+            }
+        }
+
+        .panel-font{
+            button{
+                color:#333;
+                border: solid 1px #333;
+            }
+
+            .tab-content{
+                max-width: 200px;
+                margin-right: auto;
+                margin-left: auto;
+            }
+
+            .tab-pane button{
+                width: 100%;
+                padding: 5px;
+                line-height: 1;
+            }
+        }
+
+        .panel-color{
+            button{
+                width: 20px;
+                height: 20px;
+                padding: 0;
+                line-height: 1;
+                color: #fff;
+                text-align: center;
+            }
+
+
+            .custom{
+                width:260px;
+            }
+        }
+
+    }
+}

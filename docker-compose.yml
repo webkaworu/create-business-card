@@ -1,0 +1,31 @@
+version: "3.9"
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: ./docker/httpd/Dockerfile
+    user: "1000:1000"
+    environment:
+      VIRTUAL_HOST: 'card.sample.com'
+    volumes:
+      - ./app:/var/www
+      - ./docker/user.ini:/usr/local/etc/php/conf.d/user.ini
+    depends_on:
+      - db
+    networks:
+      - local-network
+    restart: always
+  db:
+    image: mariadb:10.5
+    user: "1000:1000"
+    volumes:
+      - ./docker/db:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: card
+
+networks:
+  local-network:
+    external: true
+    name: local-network
