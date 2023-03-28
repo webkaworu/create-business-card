@@ -6,6 +6,6 @@
 	</div>
 	<slot />
 	<footer class="container-fluid mt-auto py-2 bg-primary text-white">
-		<p class="copyright text-center en mb-0">&copy; 2023 Kaoru Hosomi</p>
+		<p class="copyright text-center en mb-0">&copy; 2023 Portfolio</p>
 	</footer>
 </template>

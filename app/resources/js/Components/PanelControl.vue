@@ -5,14 +5,14 @@
 				<div>
 					<table class="ctl-position">
 						<tr>
-							<td><button type="button" data-position="left">左寄</button></td>
-							<td><button type="button" data-position="center">左右中央</button></td>
-							<td><button type="button" data-position="right">右寄</button></td>
+							<td><button type="button" @click="onPosition('left')">左寄</button></td>
+							<td><button type="button" @click="onPosition('center')">左右中央</button></td>
+							<td><button type="button" @click="onPosition('right')">右寄</button></td>
 						</tr>
 						<tr>
-							<td><button type="button" data-position="bottom">下寄</button></td>
-							<td><button type="button" data-position="middle">上下中央</button></td>
-							<td><button type="button" data-position="top">上寄</button></td>
+							<td><button type="button" @click="onPosition('bottom')">下寄</button></td>
+							<td><button type="button" @click="onPosition('middle')">上下中央</button></td>
+							<td><button type="button" @click="onPosition('top')">上寄</button></td>
 						</tr>
 					</table>
 				</div>
@@ -66,12 +66,12 @@
 		<fieldset>
 			<legend>選択中のブロック</legend>
 			<div>
-				<button type="button" id="delete">削除する</button>
+				<button type="button"  @click="onDelete()">削除する</button>
 			</div>
 		</fieldset>
 		<div class="p-1 my-1">
-			<button type="button" id="back">操作取り消し</button>
-			<button type="button" id="advance" class="ms-2">操作やり直し</button>
+			<button type="button" @click="onPaging('prev')">操作取り消し</button>
+			<button type="button" class="ms-2" @click="onPaging('next')">操作やり直し</button>
 		</div>
 		<div class="p-1 mt-2 bg-warning">
 			<Link :href="route('home')" as="button" type="button">編集を中止する</Link>
@@ -82,10 +82,14 @@
 <script setup>
 import { Link } from "@inertiajs/vue3";
 
-defineProps({
+const props = defineProps({
 	grid: Object,
+	operation: Object,
 });
 
 defineEmits(['changeGridEvent']);
 
+const onPosition = (position) => props.operation.position(position);
+const onDelete = () => props.operation.delete();
+const onPaging = (state) => props.operation.paging(state);
 </script>

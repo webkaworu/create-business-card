@@ -31,7 +31,10 @@
     "dependencies": {
         "@fortawesome/fontawesome-free": "^6.3.0",
         "@popperjs/core": "^2.11.6",
+        "bignumber.js": "^9.1.1",
         "bootstrap": "^5.2.3",
-        "core-js": "^3.29.1"
+        "core-js": "^3.29.1",
+        "file-saver": "^2.0.5",
+        "html2canvas": "^1.4.1"
     }
 }

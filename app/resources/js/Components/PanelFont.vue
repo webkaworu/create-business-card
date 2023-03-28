@@ -7,22 +7,22 @@
 		</div>
 		<div class="tab-content mt-2">
 			<div class="tab-pane fade show active" id="min">
-				<button type="button" data-font="MFont" data-stroke="0">
+				<button type="button" @click="changeFont('MFont', 0)">
 					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="96" height="16" viewBox="0 0 96 16">
 						<text transform="matrix(1 0 0 1 0 14)" style="stroke:#333;stroke-width:0;" font-family="MFont" line-height="1" font-size="16px">書体サンプル</text>
 					</svg>
 				</button>
-				<button type="button" data-font="MFont" data-stroke="0.1">
+				<button type="button" @click="changeFont('MFont', 0.1)">
 					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="96" height="16" viewBox="0 0 96 16">
 						<text transform="matrix(1 0 0 1 0 14)" style="stroke:#333;stroke-width:0.5px;" font-family="MFont" line-height="1" font-size="16px">書体サンプル</text>
 					</svg>
 				</button>
-				<button type="button" data-font="MFont" data-stroke="0.3">
+				<button type="button" @click="changeFont('MFont', 0.3)">
 					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="96" height="16" viewBox="0 0 96 16">
 						<text transform="matrix(1 0 0 1 0 14)" style="stroke:#333;stroke-width:1px;" font-family="MFont" line-height="1" font-size="16px">書体サンプル</text>
 					</svg>
 				</button>
-				<button type="button" data-font="MFont" data-stroke="0.5">
+				<button type="button" @click="changeFont('MFont', 0.5)">
 					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="96" height="16" viewBox="0 0 96 16">
 						<text transform="matrix(1 0 0 1 0 14)" style="stroke:#333;stroke-width:1.5px;" font-family="MFont" line-height="1" font-size="16px">書体サンプル</text>
 					</svg>
@@ -30,22 +30,22 @@
 			</div>
 
 			<div class="tab-pane fade" id="goth">
-				<button type="button" data-font="GFont" data-stroke="0">
+				<button type="button" @click="changeFont('GFont', 0)">
 					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="96" height="16" viewBox="0 0 96 16">
 						<text transform="matrix(1 0 0 1 0 14)" style="stroke:#333;stroke-width:0;" font-family="GFont" line-height="1" font-size="16px">書体サンプル</text>
 					</svg>
 				</button>
-				<button type="button" data-font="GFont" data-stroke="0.1">
+				<button type="button" @click="changeFont('GFont', 0.1)">
 					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="96" height="16" viewBox="0 0 96 16">
 						<text transform="matrix(1 0 0 1 0 14)" style="stroke:#333;stroke-width:0.5px;" font-family="GFont" line-height="1" font-size="16px">書体サンプル</text>
 					</svg>
 				</button>
-				<button type="button" data-font="GFont" data-stroke="0.3">
+				<button type="button" @click="changeFont('GFont', 0.3)">
 					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="96" height="16" viewBox="0 0 96 16">
 						<text transform="matrix(1 0 0 1 0 14)" style="stroke:#333;stroke-width:1px;" font-family="GFont" line-height="1" font-size="16px">書体サンプル</text>
 					</svg>
 				</button>
-				<button type="button" data-font="GFont" data-stroke="0.5">
+				<button type="button" @click="changeFont('GFont', 0.5)">
 					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="96" height="16" viewBox="0 0 96 16">
 						<text transform="matrix(1 0 0 1 0 14)" style="stroke:#333;stroke-width:1.5px;" font-family="GFont" line-height="1" font-size="16px">書体サンプル</text>
 					</svg>
@@ -53,22 +53,22 @@
 			</div>
 
 			<div class="tab-pane fade" id="kai">
-				<button type="button" data-font="KFont" data-stroke="0">
+				<button type="button" @click="changeFont('KFont', 0)">
 					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="96" height="16" viewBox="0 0 96 16">
 						<text transform="matrix(1 0 0 1 0 14)" style="stroke:#333;stroke-width:0;" font-family="KFont" line-height="1" font-size="16px">書体サンプル</text>
 					</svg>
 				</button>
-				<button type="button" data-font="KFont" data-stroke="0.1">
+				<button type="button" @click="changeFont('KFont', 0.1)">
 					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="96" height="16" viewBox="0 0 96 16">
 						<text transform="matrix(1 0 0 1 0 14)" style="stroke:#333;stroke-width:0.5px;" font-family="KFont" line-height="1" font-size="16px">書体サンプル</text>
 					</svg>
 				</button>
-				<button type="button" data-font="KFont" data-stroke="0.3">
+				<button type="button" @click="changeFont('KFont', 0.3)">
 					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="96" height="16" viewBox="0 0 96 16">
 						<text transform="matrix(1 0 0 1 0 14)" style="stroke:#333;stroke-width:1px;" font-family="KFont" line-height="1" font-size="16px">書体サンプル</text>
 					</svg>
 				</button>
-				<button type="button" data-font="KFont" data-stroke="0.5">
+				<button type="button" @click="changeFont('KFont', 0.5)">
 					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="96" height="16" viewBox="0 0 96 16">
 						<text transform="matrix(1 0 0 1 0 14)" style="stroke:#333;stroke-width:1.5px;" font-family="KFont" line-height="1" font-size="16px">書体サンプル</text>
 					</svg>
@@ -79,4 +79,10 @@
 </template>
 <script setup>
 import 'bootstrap';
+
+const props = defineProps({
+	operation: Object,
+});
+
+const changeFont = (font, stroke) => props.operation.changeFont(font, stroke);
 </script>

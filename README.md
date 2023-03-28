@@ -10,10 +10,12 @@
 - CSS（SCSS）
 - JavaScript
 - Vue3
-- Bootstrap
+- Bootstrap5
 ### バックエンド
 - PHP 8.2
 - Laravel 10.0
+- Inertia
 - composer
 ### 開発環境
 - Docker/Docker-compose
+- Vite

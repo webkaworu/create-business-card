@@ -17,4 +17,5 @@ import { Link } from "@inertiajs/vue3";
 defineProps({
 	cards: Array,
 });
+sessionStorage.removeItem('svg');
 </script>
